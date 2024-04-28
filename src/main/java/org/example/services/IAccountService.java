@@ -1,6 +1,7 @@
 package org.example.services;
 
-import org.example.entities.Account;
+import org.example.auth.RegisterRequest;
+import org.example.entities.*;
 
 import java.util.List;
 import java.util.Optional;
@@ -14,6 +15,11 @@ public interface IAccountService {
 
     Account updateAccount(Integer accountId, Account updatedAccount);
 
+    void deleteAccount(Integer accountId);
+
+    Account makeAccount(RegisterRequest request);
+
+    void saveAccount(RegisterRequest request);
 
     Account findAccountByAccountID(int accountid);
 
